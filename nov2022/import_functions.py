@@ -87,10 +87,11 @@ def execute_pre_step_8():
 
     # Defining the model
     dtc = tree.DecisionTreeClassifier()
-
+    dtc.fit(X_train, y_train)
+    
     # Making prediction on the test set
     pred_dtc = dtc.predict(X_test)
-
+    
     # Defining the model
     rfc = RandomForestClassifier(n_estimators=200)
 
